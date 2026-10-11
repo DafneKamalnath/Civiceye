@@ -1,21 +1,37 @@
-import { useEffect, useState } from "react";
-import api from "./api/axios";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Report from "./pages/Report";
+import Dashboard from "./pages/Dashboard";
 
 export default function App() {
-  const [status, setStatus] = useState("checking...");
-
-  useEffect(() => {
-    api.get("/health")
-      .then((res) => setStatus(res.data.status))
-      .catch(() => setStatus("server unreachable"));
-  }, []);
-
   return (
-    <div className="min-h-screen bg-slate-900 text-white grid place-items-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">CivicEye AI</h1>
-        <p className="mt-2 text-cyan-400">Server status: {status}</p>
-      </div>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/report"
+            element={
+              <ProtectedRoute>
+                <Report />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute roles={["authority", "admin"]}>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
