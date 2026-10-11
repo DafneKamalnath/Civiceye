@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema(
     role: { type: String, enum: ["citizen", "authority", "admin"], default: "citizen" },
     department: {
       type: String,
-      enum: ["Roads", "Water", "Sanitation", "Electricity", "Parks"],
+      enum: ["Roads", "Water", "Sanitation", "Electricity", "Parks", "Other"],
+      default: "Other",
     },
   },
   { timestamps: true }
