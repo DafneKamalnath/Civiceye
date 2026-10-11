@@ -1,0 +1,30 @@
+[
+  {
+    "issueKey": "pothole-anna-salai",
+    "userEmail": "asha@civiceye.test",
+    "text": "Huge pothole near the Anna Salai signal, almost fell off my bike.",
+    "location": { "type": "Point", "coordinates": [80.2707, 13.0827] },
+    "aiResult": { "category": "pothole", "severity": 4, "confidence": 0.87, "context": ["near signal", "heavy traffic"], "durationDays": 5 }
+  },
+  {
+    "issueKey": "pothole-anna-salai",
+    "userEmail": "ravi@civiceye.test",
+    "text": "Same pothole is getting bigger after the rain.",
+    "location": { "type": "Point", "coordinates": [80.2708, 13.0826] },
+    "aiResult": { "category": "pothole", "severity": 4, "confidence": 0.81, "context": ["after rain"], "durationDays": 7 }
+  },
+  {
+    "issueKey": "garbage-t-nagar",
+    "userEmail": "asha@civiceye.test",
+    "text": "Garbage bin overflowing, bad smell.",
+    "location": { "type": "Point", "coordinates": [80.2341, 13.0418] },
+    "aiResult": { "category": "garbage", "severity": 3, "confidence": 0.9, "context": ["bad smell"], "durationDays": 4 }
+  },
+  {
+    "issueKey": "water-leak-adyar",
+    "userEmail": "ravi@civiceye.test",
+    "text": "Water gushing out of a broken pipe.",
+    "location": { "type": "Point", "coordinates": [80.2565, 13.0012] },
+    "aiResult": { "category": "water_leak", "severity": 5, "confidence": 0.93, "context": ["flooding road"], "durationDays": 1 }
+  }
+]
