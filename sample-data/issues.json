@@ -1,0 +1,54 @@
+[
+  {
+    "key": "pothole-anna-salai",
+    "category": "pothole",
+    "summary": "Deep pothole near the signal, two-wheelers swerving into traffic",
+    "location": { "type": "Point", "coordinates": [80.2707, 13.0827] },
+    "address": "Anna Salai, Chennai",
+    "severity": 4,
+    "reportCount": 3,
+    "priorityScore": 78,
+    "priorityLabel": "HIGH",
+    "department": "Roads",
+    "status": "open"
+  },
+  {
+    "key": "garbage-t-nagar",
+    "category": "garbage",
+    "summary": "Overflowing garbage bin, uncollected for several days",
+    "location": { "type": "Point", "coordinates": [80.2341, 13.0418] },
+    "address": "T. Nagar, Chennai",
+    "severity": 3,
+    "reportCount": 2,
+    "priorityScore": 52,
+    "priorityLabel": "MEDIUM",
+    "department": "Sanitation",
+    "status": "in_progress"
+  },
+  {
+    "key": "water-leak-adyar",
+    "category": "water_leak",
+    "summary": "Water main leaking onto the road",
+    "location": { "type": "Point", "coordinates": [80.2565, 13.0012] },
+    "address": "Adyar, Chennai",
+    "severity": 5,
+    "reportCount": 1,
+    "priorityScore": 91,
+    "priorityLabel": "CRITICAL",
+    "department": "Water",
+    "status": "open"
+  },
+  {
+    "key": "streetlight-velachery",
+    "category": "streetlight",
+    "summary": "Streetlight out on a dark stretch",
+    "location": { "type": "Point", "coordinates": [80.2209, 12.9815] },
+    "address": "Velachery, Chennai",
+    "severity": 2,
+    "reportCount": 1,
+    "priorityScore": 20,
+    "priorityLabel": "LOW",
+    "department": "Electricity",
+    "status": "resolved"
+  }
+]
