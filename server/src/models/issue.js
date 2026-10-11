@@ -19,6 +19,7 @@ const issueSchema = new mongoose.Schema(
     priorityScore: { type: Number, default: 0 },
     priorityLabel: { type: String, enum: ["LOW", "MEDIUM", "HIGH", "CRITICAL"], default: "LOW" },
     department: String,
+    nearSensitive: { type: Boolean, default: false },
     status: { type: String, enum: ["open", "in_progress", "resolved"], default: "open" },
     statusHistory: [
       {
